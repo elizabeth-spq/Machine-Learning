@@ -10,8 +10,8 @@ from sklearn.linear_model import LinearRegression
 
 dataset_cols = ["bike_count", "hour", "temp", "humidity", "wind", "visibility", "dew_pt_temp", "radiation", "rain", "snow", "functional"]
 df = pd.read_csv("static/files/SeoulBikeData.csv").drop(["Date", "Holiday", "Seasons"], axis=1)
-
-#print(str(df))
+df.head()
+print(str(df))
 """
 df.columns = dataset_cols
 df["functional"] = (df["functional"] == "Yes").astype(int)
